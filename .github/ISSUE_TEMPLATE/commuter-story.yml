@@ -1,0 +1,73 @@
+name: 🚗 Commuter Story Submission
+description: Share your traffic story, complaint, or observation for the podcast
+title: "[STORY]: "
+labels: ["story-submission", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for sharing your commute story!
+        Fill out the fields below. The community will vote on stories with 👍 reactions, and the most popular ones become podcast episodes.
+
+  - type: input
+    id: headline
+    attributes:
+      label: Story Headline
+      description: A short, catchy title for your story
+      placeholder: "The day I-95 turned into a parking lot for 4 hours"
+    validations:
+      required: true
+
+  - type: textarea
+    id: story
+    attributes:
+      label: Your Story
+      description: Tell us what happened. Be as detailed as you like.
+      placeholder: "I was driving home from work when..."
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: City, highway, intersection, or route
+      placeholder: "I-95 North, near Exit 22, Baltimore MD"
+    validations:
+      required: true
+
+  - type: input
+    id: when
+    attributes:
+      label: When did this happen?
+      description: Date and approximate time
+      placeholder: "Tuesday, Sept 8, 2026, around 5:30 PM"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What kind of story is this?
+      options:
+        - Commute Nightmare
+        - Road Rage Encounter
+        - Traffic Hack / Tip
+        - Infrastructure Complaint
+        - Public Transit Story
+        - Funny / Wholesome Moment
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Permission
+      description: We need your OK to feature this on the podcast
+      options:
+        - label: I give permission for this story to be read/adapted on the podcast
+          required: true
+        - label: I'd like to remain anonymous if featured
+          required: false
